@@ -1,0 +1,132 @@
+.container{
+    position: relative;
+    width: 90%;
+    max-width: 960px;
+    height: 600px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 1em #e5e5e5;
+    font-family: sans-serif;
+}
+
+main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+aside{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: #097969;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+/* SignIn/SignUp form */
+.form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form h2{
+    font-size: 2.5rem;
+    margin-top: 1em;
+    color: #097969;
+}
+
+/* Main Form */
+form{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 0.5em;
+    font-size: 1.05rem;
+}
+
+input{
+    width: 100%;
+    height: 3em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    border: 1px solid #e5e5e5;
+    background-color: #e6e6e6;
+}
+
+button{
+    text-transform: uppercase;
+    align-self: center;
+    font-size: 1.05rem;
+    padding: 1em 3.5em;
+    border-radius: 2em;
+    background-color: #097969;
+    color: #fff;
+    cursor: pointer;
+}
+
+main button{
+    border: none;
+    margin: 1.5em 0;
+}
+
+/* Aside-block */
+aside div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+aside h2{
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+aside button{
+    border: 2px solid #fff;
+}
+
+/* Default setting for both signIn and signUp form */
+main>.signIn-form, aside>.signIn-up-block{
+    display: none;
+}
+
+/* "slideRight" class for button click event*/
+main.slideRight{
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+
+/* "slideLight" class for button click event*/
+main.slideLeft{
+    left: 100%;
+    transform: translateX(100%);
+}
+
+/* Display signUp and signIn form when btn is clicked */
+main.slideRight>.signIn-form, aside.slideLeft>.sign-up-block{
+    display: flex;
+}
+
+/* Hidding signUp form and sign-in-block on btn click */
+main.slideRight .signUp-form, aside.slideLeft .sign-in-block{
+    display: none;
+}
+
+
